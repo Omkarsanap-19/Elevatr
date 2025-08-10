@@ -1,7 +1,9 @@
 package com.example.elevatr.frags
 
+import android.content.Context.MODE_PRIVATE
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,11 +13,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.elevatr.R
 import com.example.elevatr.databinding.FragmentProfileBinding
 import com.example.elevatr.loginActivity
 import com.example.elevatr.res.ResponseList
 import com.example.elevatr.res.ResponseListItem
+import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -26,7 +30,8 @@ import kotlin.collections.isNullOrEmpty
 
 
 class ProfileFragment : Fragment() {
-
+    private lateinit var switchDarkMode: SwitchMaterial
+    private lateinit var prefs: SharedPreferences
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -37,6 +42,17 @@ class ProfileFragment : Fragment() {
         val view = binding.root
 
         val logoutButton = view.findViewById<Button>(R.id.buttonSignOut)
+
+        switchDarkMode = view.findViewById(R.id.switchDarkMode)
+
+        // Listen for changes
+        switchDarkMode.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
 
 
         logoutButton.setOnClickListener {
@@ -50,6 +66,9 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fetchData()
     }
+
+
+
 
     private fun askatoleave() {
         val builder= AlertDialog.Builder(requireContext())
@@ -113,6 +132,18 @@ class ProfileFragment : Fragment() {
     }
 
 
+    fun downloadResumePdf() {
+        // Implement your PDF download logic here
+        // This is a placeholder function
+        Toast.makeText(
+            requireContext(),
+            "Download functionality not implemented yet",
+            Toast.LENGTH_SHORT
+        ).show()
+
+    }
 
 
 }
+
+

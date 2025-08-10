@@ -48,7 +48,7 @@ class ResumeUpload : AppCompatActivity() {
 
         binding.buttonAnalyze.setOnClickListener {
             // Check if text is already extracted
-            if (binding.extText.text.isNotEmpty()&&binding.editTextJobDescription.text?.isNotEmpty()!!) {
+            if (binding.editTextResume.text?.isNotEmpty()!!&&binding.editTextJobDescription.text?.isNotEmpty()!!) {
                 // Proceed with analysis
                 Toast.makeText(this, "Analyzing resume...", Toast.LENGTH_SHORT).show()
                 // Here you can add your analysis logic
@@ -84,11 +84,11 @@ class ResumeUpload : AppCompatActivity() {
             val text = stripper.getText(document)
             document.close()
             binding.progressBar.visibility = View.GONE
-            binding.extText.text = text.ifBlank { "No text found in this PDF ❗" }
+            binding.editTextResume.setText(text.ifBlank { "No text found in this PDF ❗" })
         } catch (e: Exception) {
             binding.progressBar.visibility = View.GONE
             Toast.makeText(this, "Error reading PDF: ${e.message}", Toast.LENGTH_SHORT).show()
-            binding.extText.text = "Error reading PDF: ${e.message}"
+            binding.editTextResume.setText("Error reading PDF: ${e.message}")
         }
     }
 }

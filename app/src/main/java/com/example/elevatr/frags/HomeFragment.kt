@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.elevatr.R
 import com.example.elevatr.ResumeUpload
+import com.example.elevatr.myAdapter
 
 
 class HomeFragment : Fragment() {
@@ -25,6 +28,15 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), ResumeUpload::class.java)
             startActivity(intent)
         }
+
+        val recycle = view.findViewById<RecyclerView>(R.id.recyclerViewHistory)
+        recycle.layoutManager = LinearLayoutManager(requireContext())
+        recycle.adapter = myAdapter(
+            listOf(
+                "Resume 1",
+                "Resume 2"
+            )
+        )
 
 
 

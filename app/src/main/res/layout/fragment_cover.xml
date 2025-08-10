@@ -233,14 +233,6 @@
 
                     </GridLayout>
 
-                    <Button
-                        android:id="@+id/buttonNextStep"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Generate Cover Letter"
-                        style="@style/Button.Primary"
-                        android:enabled="true" />
-
                 </LinearLayout>
 
             </ScrollView>

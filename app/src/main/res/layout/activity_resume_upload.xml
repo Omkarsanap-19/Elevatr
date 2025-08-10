@@ -48,14 +48,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/extText"
-                    android:text="Resume and Job Description Upload"
-                    android:textColor="@color/text_primary"
-                    android:layout_marginBottom="16dp" />
-
 
 
                 Text Input Card

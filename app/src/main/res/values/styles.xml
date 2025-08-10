@@ -81,9 +81,9 @@
     </style>
 
     <style name="BottomNav">
-        <item name="iconTint">@color/black</item>
-        <item name="textColor">@color/black</item>
-        <item name="backgroundColor">@color/white</item>
+        <item name="iconTint">@color/text_primary</item>
+        <item name="textColor">@color/text_primary</item>
+        <item name="backgroundColor">@color/background_white</item>
         <item name="android:backgroundTint">@color/transparent</item>
     </style>
 </resources>
