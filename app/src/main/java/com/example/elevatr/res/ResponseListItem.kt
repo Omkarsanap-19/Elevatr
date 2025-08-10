@@ -1,0 +1,33 @@
+package com.example.elevatr.res
+
+data class ResponseListItem(
+    val about: String? = null,
+    val activities: List<Activity>? = emptyList(),
+    val articles: List<Any>? = emptyList(),
+    val awards: List<Any>? = emptyList(),
+    val background_cover_image_url: String? = null,
+    val certification: List<Certification>? = emptyList(),
+    val connections: String? = null,
+    val courses: List<Any>? = emptyList(),
+    val description: Description? = null,
+    val education: List<Education>? = emptyList(),
+    val experience: List<Experience>? = emptyList(),
+    val first_name: String? = null,
+    val followers: String? = null,
+    val fullName: String? = null,
+    val headline: String? = null,
+    val languages: List<Any>? = emptyList(),
+    val last_name: String? = null,
+    val linkedin_internal_id: String? = null,
+    val location: String? = null,
+    val organizations: List<Any>? = emptyList(),
+    val people_also_viewed: List<Any>? = emptyList(),
+    val profile_photo: String? = null,
+    val projects: List<Project>? = emptyList(),
+    val public_identifier: String? = null,
+    val publications: List<Any>? = emptyList(),
+    val recommendations: List<Any>? = emptyList(),
+    val score: List<Any>? = emptyList(),
+    val similar_profiles: List<SimilarProfile>? = emptyList(),
+    val volunteering: List<Any>? = emptyList()
+)

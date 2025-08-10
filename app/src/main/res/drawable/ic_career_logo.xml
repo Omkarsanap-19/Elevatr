@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+     Background circle 
+    <path
+        android:fillColor="@color/text_white"
+        android:pathData="M60,60m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+    
+     Career icon 
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M40,35 L80,35 L80,40 L75,40 L75,75 L70,75 L70,85 L50,85 L50,75 L45,75 L45,40 L40,40 Z" />
+    
+     Briefcase handle 
+    <path
+        android:fillColor="@color/primary"
+        android:pathData="M50,30 L70,30 L70,35 L50,35 Z" />
+    
+     AI circuit pattern 
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M30,50 L35,50 L35,55 L40,55 L40,60 L35,60 L35,65 L30,65 Z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/accent" />
+    
+    <path
+        android:fillColor="@color/accent"
+        android:pathData="M85,45 L90,45 L90,50 L85,50 L85,55 L90,55 L90,60 L85,60 Z"
+        android:strokeWidth="1"
+        android:strokeColor="@color/accent" />
+</vector>

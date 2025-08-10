@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frags.CoverFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_light_gray">
+
+        <!--     Top App Bar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background_white"
+            android:elevation="4dp"
+            app:title="Cover Letter Generator"
+            app:titleTextColor="@color/text_primary"
+         />
+
+        <FrameLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--         Step 1: Design Selection -->
+            <ScrollView
+                android:id="@+id/step1Container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose a Design Template"
+                        style="@style/TextAppearance.Title"
+                        android:layout_marginBottom="24dp" />
+
+                    <!--                 Design Template Grid -->
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:layout_marginBottom="24dp">
+
+                        <!--                     Template 1: Professional -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTemplate1"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            style="@style/Card.Primary"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_save"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="Professional Template" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Professional"
+                                    style="@style/TextAppearance.Body"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Clean and formal"
+                                    style="@style/TextAppearance.Caption"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                     Template 2: Modern -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTemplate2"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            style="@style/Card.Primary"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_upload"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="Modern Template" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Modern"
+                                    style="@style/TextAppearance.Body"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Contemporary style"
+                                    style="@style/TextAppearance.Caption"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                     Template 3: Creative -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTemplate3"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            style="@style/Card.Primary"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_check_circle"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="Creative Template" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Creative"
+                                    style="@style/TextAppearance.Body"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Bold and unique"
+                                    style="@style/TextAppearance.Caption"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                     Template 4: Minimal -->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardTemplate4"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            style="@style/Card.Primary"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="16dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/ic_lightbulb"
+                                    android:layout_marginBottom="12dp"
+                                    android:contentDescription="Minimal Template" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Minimal"
+                                    style="@style/TextAppearance.Body"
+                                    android:textAlignment="center"
+                                    android:layout_marginBottom="4dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Simple and elegant"
+                                    style="@style/TextAppearance.Caption"
+                                    android:textAlignment="center" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </GridLayout>
+
+                    <Button
+                        android:id="@+id/buttonNextStep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Generate Cover Letter"
+                        style="@style/Button.Primary"
+                        android:enabled="true" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <!--         Step 2: Preview and Export -->
+            <ScrollView
+                android:id="@+id/step2Container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Cover Letter"
+                        style="@style/TextAppearance.Title"
+                        android:layout_marginBottom="16dp" />
+
+                    <!--                 Cover Letter Preview -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Card.Primary"
+                        android:layout_marginBottom="24dp">
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:id="@+id/textCoverLetterPreview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dear Hiring Manager,\n\nI am writing to express my strong interest in the Software Developer position at your company..."
+                                style="@style/TextAppearance.Body"
+                                android:lineSpacingExtra="4dp" />
+
+                        </ScrollView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                 Action Buttons -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/buttonExportPDF"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Export as PDF"
+                            style="@style/Button.Primary"
+                            android:layout_marginBottom="12dp"
+                            android:drawableStart="@drawable/ic_download"
+                            android:drawablePadding="8dp" />
+
+                        <Button
+                            android:id="@+id/buttonCopyText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Copy to Clipboard"
+                            style="@style/Button.Secondary"
+                            android:layout_marginBottom="12dp"
+                            android:drawableStart="@drawable/ic_copy"
+                            android:drawablePadding="8dp" />
+
+                        <Button
+                            android:id="@+id/buttonEditLetter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Edit Letter"
+                            style="@style/Button.Secondary"
+                            android:drawableStart="@drawable/ic_edit"
+                            android:drawablePadding="8dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnalysisActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background_light_gray">
+
+        <!--     Top App Bar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background_white"
+            android:elevation="4dp"
+            app:title="Analysis Results"
+            app:titleTextColor="@color/text_primary"
+            app:navigationIcon="@drawable/ic_arrow_back" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="ExtraText">
+
+                <!--             Score Section -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card.Primary"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Match Score"
+                            style="@style/TextAppearance.Title"
+                            android:layout_marginBottom="24dp" />
+
+                        <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="16dp">
+
+                            <ProgressBar
+                                android:id="@+id/progressScore"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:progressDrawable="@drawable/progress_circle"
+                                android:progress="85"
+                                style="?android:attr/progressBarStyleHorizontal" />
+
+                            <TextView
+                                android:id="@+id/textScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="85%"
+                                android:textSize="24sp"
+                                android:textColor="@color/primary"
+                                android:fontFamily="@font/roboto_bold"
+                                android:layout_centerInParent="true" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Excellent Match!"
+                            style="@style/TextAppearance.Subtitle"
+                            android:textColor="@color/success" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                Key Strengths
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card.Primary"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Key Strengths"
+                            style="@style/TextAppearance.Title"
+                            android:layout_marginBottom="16dp"
+                            android:drawableStart="@drawable/ic_check_circle"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/success" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutStrengths"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            Strength items will be added programmatically
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="• 5+ years of experience in software development"
+                                style="@style/TextAppearance.Body"
+                                android:layout_marginBottom="8dp"
+                                android:drawableStart="@drawable/ic_bullet_point"
+                                android:drawablePadding="8dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="• Strong background in React and Node.js"
+                                style="@style/TextAppearance.Body"
+                                android:layout_marginBottom="8dp"
+                                android:drawableStart="@drawable/ic_bullet_point"
+                                android:drawablePadding="8dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="• Experience with cloud platforms (AWS, Azure)"
+                                style="@style/TextAppearance.Body"
+                                android:drawableStart="@drawable/ic_bullet_point"
+                                android:drawablePadding="8dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                Areas for Improvement
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card.Primary"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Areas for Improvement"
+                            style="@style/TextAppearance.Title"
+                            android:layout_marginBottom="16dp"
+                            android:drawableStart="@drawable/ic_lightbulb"
+                            android:drawablePadding="8dp"
+                            android:drawableTint="@color/warning" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutImprovements"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="• Consider adding Docker containerization experience"
+                                style="@style/TextAppearance.Body"
+                                android:layout_marginBottom="8dp"
+                                android:drawableStart="@drawable/ic_bullet_point"
+                                android:drawablePadding="8dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="• Highlight any machine learning projects"
+                                style="@style/TextAppearance.Body"
+                                android:drawableStart="@drawable/ic_bullet_point"
+                                android:drawablePadding="8dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                Suggestion Chips
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Card.Primary"
+                    android:layout_marginBottom="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quick Actions"
+                            style="@style/TextAppearance.Title"
+                            android:layout_marginBottom="16dp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupSuggestions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:chipSpacing="8dp"
+                            app:lineSpacing="8dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipCoverLetter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Generate Cover Letter"
+                                android:checkable="false"
+                                android:clickable="true"
+                                app:chipBackgroundColor="@color/primary_light"
+                                app:chipIcon="@drawable/ic_document" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipOptimize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Optimize Resume"
+                                android:checkable="false"
+                                android:clickable="true"
+                                app:chipBackgroundColor="@color/accent_light"
+                                app:chipIcon="@drawable/ic_tune" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipSimilarJobs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Find Similar Jobs"
+                                android:checkable="false"
+                                android:clickable="true"
+                                app:chipBackgroundColor="@color/primary_light"
+                                app:chipIcon="@drawable/ic_search" />
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                Action Buttons
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/buttonSaveAnalysis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        style="@style/Button.Secondary"
+                        android:layout_marginEnd="8dp"
+                        android:drawableStart="@drawable/ic_save"
+                        android:drawablePadding="8dp" />
+
+                    <Button
+                        android:id="@+id/buttonShareAnalysis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Share"
+                        style="@style/Button.Primary"
+                        android:layout_marginStart="8dp"
+                        android:drawableStart="@drawable/ic_share"
+                        android:drawablePadding="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

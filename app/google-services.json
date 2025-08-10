@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "859809407809",
+    "project_id": "elevatr-01",
+    "storage_bucket": "elevatr-01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859809407809:android:6159608af54ab6b85f37c0",
+        "android_client_info": {
+          "package_name": "com.example.elevatr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7B-yuDbl3KRVwqSIbBJ3-nMb8AoShZJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
